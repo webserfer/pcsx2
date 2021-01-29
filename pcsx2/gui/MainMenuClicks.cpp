@@ -65,7 +65,7 @@ void MainEmuFrame::Menu_McdSettings_Click(wxCommandEvent& event)
 	AppOpenModalDialog<McdConfigDialog>(wxEmptyString, this);
 }
 
-void MainEmuFrame::Menu_NetworkSettings_Click(wxCommandEvent &event)
+void MainEmuFrame::Menu_NetworkSettings_Click(wxCommandEvent& event)
 {
 	DEV9configure();
 }
@@ -80,7 +80,7 @@ void MainEmuFrame::Menu_PADSettings_Click(wxCommandEvent& event)
 	PADconfigure();
 }
 
-void MainEmuFrame::Menu_WindowSettings_Click(wxCommandEvent &event)
+void MainEmuFrame::Menu_WindowSettings_Click(wxCommandEvent& event)
 {
 	wxCommandEvent evt(pxEvt_SetSettingsPage);
 	evt.SetString(L"GS Window");
@@ -433,7 +433,7 @@ void MainEmuFrame::_DoBootCdvd()
 			return;
 		}
 	}
-	
+
 	sApp.SysExecute(g_Conf->CdvdSource);
 }
 
@@ -843,6 +843,11 @@ void MainEmuFrame::Menu_ShowAboutBox(wxCommandEvent& event)
 	AppOpenDialog<AboutBoxDialog>(this);
 }
 
+void MainEmuFrame::Menu_ShowGSDump(wxCommandEvent& event)
+{
+	AppOpenDialog<GSDumpDialog>(this);
+}
+
 void MainEmuFrame::Menu_Capture_Video_Record_Click(wxCommandEvent& event)
 {
 	ScopedCoreThreadPause paused_core;
@@ -930,7 +935,7 @@ void MainEmuFrame::Menu_Capture_Screenshot_Screenshot_Click(wxCommandEvent& even
 	GSmakeSnapshot(g_Conf->Folders.Snapshots.ToAscii());
 }
 
-void MainEmuFrame::Menu_Capture_Screenshot_Screenshot_As_Click(wxCommandEvent &event)
+void MainEmuFrame::Menu_Capture_Screenshot_Screenshot_As_Click(wxCommandEvent& event)
 {
 	if (!CoreThread.IsOpen())
 		return;
@@ -970,7 +975,7 @@ void MainEmuFrame::Menu_Recording_New_Click(wxCommandEvent& event)
 				return;
 			}
 		}
-		
+
 		if (!initiallyPaused)
 			g_InputRecordingControls.Resume();
 	}
@@ -999,7 +1004,7 @@ void MainEmuFrame::Menu_Recording_Play_Click(wxCommandEvent& event)
 			g_InputRecordingControls.Resume();
 		return;
 	}
-	
+
 	if (!g_InputRecording.GetInputRecordingData().FromSaveState())
 		StartInputRecording();
 }
