@@ -1306,6 +1306,9 @@
     <ClCompile Include="..\..\PAD\Windows\PADRawInput.cpp">
       <Filter>System\Ps2\PAD</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\gui\Dialogs\GSDumpDialog.cpp">
+      <Filter>AppHost\Dialogs</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Patch.h">
@@ -2133,6 +2136,9 @@
     <CustomBuild Include="..\..\gui\Resources\BackgroundLogo.png">
       <Filter>AppHost\Resources</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\gui\Resources\NoIcon.png">
+      <Filter>AppHost\Resources</Filter>
+    </CustomBuild>
     <CustomBuild Include="..\..\gui\Resources\ButtonIcon_Camera.png">
       <Filter>AppHost\Resources</Filter>
     </CustomBuild>
@@ -2228,5 +2234,10 @@
     <Manifest Include="..\PCSX2.manifest">
       <Filter>AppHost\Resources</Filter>
     </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\gui\Resources\NoIcon.png">
+      <Filter>AppHost\Resources</Filter>
+    </Image>
   </ItemGroup>
 </Project>
