@@ -1,4 +1,4 @@
-# PCSX2
+# PCSX2 Free
 
 ![Windows Build](https://github.com/PCSX2/pcsx2/workflows/Windows%20Build/badge.svg)
 ![Linux Build](https://github.com/PCSX2/pcsx2/workflows/Linux%20Build/badge.svg)
